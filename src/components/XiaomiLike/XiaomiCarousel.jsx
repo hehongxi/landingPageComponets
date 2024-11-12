@@ -153,7 +153,7 @@ export default function XiaomiCarousel() {
                         <img src={arrowIcon} alt="arrowIcon" className=' opacity-0 duration-300 group-hover:opacity-100 transition rotate-[45deg] ' />
                     </button>
                     {/* 可点击跳转，带计时，导航条 */}
-                    <div className='absolute bottom-[10px] left-1/2 transform -translate-x-1/2 flex space-x-4 '>
+                    <div className='absolute bottom-[10px] left-1/2 transform -translate-x-1/2 flex zspace-x-4 '>
                         {newSlidesData.map((_, index) => {
                             if (index > 0 && index < newSlidesData.length - 1) {
                                 return (
@@ -162,7 +162,7 @@ export default function XiaomiCarousel() {
                                         className={`h-3 w-20   `}
                                         onClick={() => goToSlide(index)}>
                                         <div className='h-[2px] w-20 bg-gray-300 opacity-50 '>
-                                            <div className={`h-[2px] w-0 ${(!isPaused && currentIndex == index) && `w-full transition-all duration-[${cycleTime - 500}ms] ease-linear`} bg-orange-500`}></div>
+                                            <div className={`h-[2px] w-0 ${(!isPaused && currentIndex == index) && `w-full transition-all duration-[4500ms] ease-linear`} bg-orange-500`}></div>
                                         </div>
                                     </button>
                                 )
